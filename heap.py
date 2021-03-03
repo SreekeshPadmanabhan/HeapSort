@@ -1,5 +1,6 @@
 # Original Author: sreekeshpadmanabhan@gmail.com
 # Implementation of Heapsort algorithms as described & analyzed from Introduction to Algorithms by CLRS
+# https://drive.google.com/file/d/121Ih7X4AMuo4239af91vRYXHpwBfVIaq/view?usp=sharing
 import random
 
 class HeapClass:
@@ -14,6 +15,7 @@ class HeapClass:
         self.itracker = []
         print(self.heap)
 
+    #Run Time: O(lg n)~O(h
     def max_heapify(self,index):
         largest = index
         left = 2*index+1
@@ -34,6 +36,7 @@ class HeapClass:
             self.heap[largest] = temp
             self.max_heapify(largest)
 
+    #Run Time: O(nlgn)~O(n) tight
     def build_max_heap(self):
         print(f"{len(self.heap)}")
         #+1 to include /2 floor in range
@@ -45,6 +48,7 @@ class HeapClass:
             print(self.itracker)
             print(self.heap)
 
+    #Run Time: O(nlgn), 
     def heapsort(self):
         # build_max_heaps
         self.build_max_heap()
